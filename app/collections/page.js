@@ -104,7 +104,7 @@ export default function Collections() {
                                         {!collection.collectionId && <>
                                             {!isConnected ? (
                                                 <a className="btn-action style-2" data-aos="fade-up" data-aos-duration={1200} onClick={() => open()}>
-                                                    {isConnected && address ? addressParse(address) : "aptos.chomtana.eth"}
+                                                    {isConnected && address ? addressParse(address) : "Connect"}
                                                 </a>
                                             ) : (
                                                 <div>

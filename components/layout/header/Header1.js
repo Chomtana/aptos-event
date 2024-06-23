@@ -6,6 +6,8 @@ import MobileMenu from "../MobileMenu"
 import { useWeb3Modal } from '@web3modal/wagmi/react'
 import { useAccount } from "wagmi"
 import { addressParse } from "@/components/utils/address"
+import { useWallet } from "@aptos-labs/wallet-adapter-react"
+import { WalletSelector } from "@/components/elements/WalletSelector"
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
     const [isMobile, setIsMobile] = useState(false)
@@ -50,9 +52,10 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                 <div className="header__right">
                                     {!isMobile && false &&  <Menu /> }
                                     <div className="button">
-                                        <a className="btn-action" onClick={() => open()}>
-                                            {isConnected && address ? addressParse(address) : "aptos.chomtana.eth"}
-                                        </a>
+                                        {/* <a className="btn-action" onClick={() => open()}>
+                                            {isConnected && address ? addressParse(address) : "Connect"}
+                                        </a> */}
+                                        <WalletSelector />
                                     </div>
                                     <div className="mobile-button" onClick={handleMobileMenu}><span /></div>{/* /.mobile-button */}
                                 </div>
