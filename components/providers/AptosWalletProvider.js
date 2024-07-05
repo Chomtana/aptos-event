@@ -38,7 +38,7 @@ export default function AptosWalletProvider({ children }) {
   return (
     <AptosWalletAdapterProvider
       plugins={wallets}
-      dappConfig={{ network: Network.MAINNET }}
+      dappConfig={{ network: Network.MAINNET, aptosConnectDappId: 'a1103774-1419-4148-b911-a6cc74069609' }}
       autoConnect={true}
     >
       {children}

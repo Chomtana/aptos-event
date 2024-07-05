@@ -9,7 +9,7 @@ import uuid
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)
-client = OpenAI(api_key='sk-ai-mint-Ar49tVuyH8eI4OTSTMa4T3BlbkFJE17bPqUnLzeiTBVmzOZV')  # Replace with your actual OpenAI API key
+client = OpenAI(api_key='')  # Replace with your actual OpenAI API key
 host = 'https://ai-mint-metadata.chom.dev'
 
 # Define the directory to save images
